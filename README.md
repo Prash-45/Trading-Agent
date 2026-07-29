@@ -2,11 +2,7 @@ Chapter 1 - The Wrong Question
 
 Most trading projects begin like this:
 
-Historical Data
-       ↓
-Predict Tomorrow's Price
-       ↓
-Buy / Sell
+Historical Data --> Predict Tomorrow's Price --> Buy / Sell
 
 But after working on multiple prediction models, I realized something was missing.
 
@@ -26,17 +22,7 @@ Chapter 2 — Thought of teaching an Agent Instead of Building a Predictor
 
 The idea evolved into this:
 
-Historical Market Data
-        ↓
-Feature Engineering
-        ↓
-Custom Trading Environment
-        ↓
-PPO Agent
-        ↓
-Continuous Actions
-        ↓
-Portfolio Reward
+Historical Market Data --> Feature Engineering --> Custom Trading Environment --> PPO Agent ---> Continuous Actions --> Portfolio Reward
 
 
 Chapter 3 — Building the Environment
@@ -47,13 +33,7 @@ The neural network wasn't my first concern. The environment was.
 
 I had to define:
 
-State
-  ↓
-Action
-  ↓
-Environment Dynamics
-  ↓
-Reward
+State --> Action --> Environment Dynamics --> Reward
 
 <img width="1024" height="1536" alt="WhatsApp Image 2026-07-28 at 22 14 44" src="https://github.com/user-attachments/assets/27fb1d71-1f23-4033-86e7-bf48e1bdc657" />
 
@@ -84,15 +64,7 @@ Evaluation day.
 
 I expected to see something like this.
 
-Buy
- ↓
-Hold
- ↓
-Sell
- ↓
-Buy
- ↓
-Hold
+Buy --> Hold --> Sell --> Buy --> Hold
 
 Instead...
 
@@ -167,7 +139,9 @@ Action Distribution
 
 <img width="1096" height="826" alt="image" src="https://github.com/user-attachments/assets/9c5f3bb7-eb38-4278-a706-404721c21c4b" />
 
-Important Note
+
+ 
+Important Note -->
 
 One of the biggest lessons from this project reminded me of Abraham Wald's WWII aircraft story. Engineers wanted to reinforce the parts of returning planes covered in bullet holes. Wald pointed out they should reinforce the areas without bullet holes, because planes hit there never returned.
 I made a similar mistake. I initially blamed the PPO agent for always buying. After debugging, I realized the agent wasn't wrong—it was simply optimizing the reward function and environment I had designed.
