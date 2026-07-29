@@ -144,5 +144,8 @@ Action Distribution
 Important Note -->
 
 One of the biggest lessons from this project reminded me of Abraham Wald's WWII aircraft story. Engineers wanted to reinforce the parts of returning planes covered in bullet holes. Wald pointed out they should reinforce the areas without bullet holes, because planes hit there never returned.
+
+The agent always buying wasn't necessarily evidence that PPO had failed. It was evidence that the reward function, market regime, and environment design allowed that behavior to become the easiest way to maximize reward.
+
 I made a similar mistake. I initially blamed the PPO agent for always buying. After debugging, I realized the agent wasn't wrong—it was simply optimizing the reward function and environment I had designed.
 The lesson: In AI, don't just analyze the model's behavior. Analyze the objective and environment that produced it. A model learns exactly what you reward, not necessarily what you intend.
